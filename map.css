@@ -1,0 +1,80 @@
+
+#cols {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#leftmenu {
+    width: 20%;
+    padding: 10px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.llmap {
+    height: 700px;
+    width: 75%;
+}
+
+.lf-book-marker {
+    width: 36px;
+    height: 36px;
+    background: url("/static/images/map-marker.svg");
+    background-size: 36px 36px;
+}
+
+.lf-book-marker-opacity {
+    opacity: 100%;
+}
+
+.filter-test {
+    filter: brightness(0.5) sepia(1) hue-rotate(-80deg) saturate(2);
+}
+
+
+.book_marker {
+    display: inline-block;
+    opacity: 1;
+    flex-shrink: 0;
+}
+
+.book_thumb {
+    width: 36px;
+}
+
+#booktitles {
+    list-style-type: none;
+}
+
+.leaflet-control-layers-selector {
+    display: none;
+}
+
+.leaflet-control-layers label {
+	font-size: 13px;
+}
+
+
+
+.legend_row {
+    display: flex;
+    align-items: flex-end;
+}
+
+.actions_span {
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+
+.del_btn {
+    width: 18px;
+    opacity: 0.7;
+    vertical-align: text-bottom;
+}
+
+
+.del_btn:hover {
+    opacity: 1;
+    filter: invert(30%) sepia(93%) saturate(7455%) hue-rotate(356deg) brightness(103%) contrast(120%);
+}

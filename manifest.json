@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "parislib",
+  "version": "1.0",
+
+  "description": "",
+
+  "icons": {
+    "32": "icons/parislib-32.png",
+    "64": "icons/parislib-64.png",
+    "128": "icons/parislib-128.png",
+    "256": "icons/parislib-256.png"
+  },
+
+  "background": {
+    "scripts": [
+        "background.js"
+    ]
+  },
+
+
+  "web_accessible_resources": ["parislib.js", "map.html", "map.js", "static/*", "static/images/*", "icons/*"],
+
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "storage", "tabs"]
+}

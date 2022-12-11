@@ -1,3 +1,5 @@
+(function() {
+
 
 
 function htmlToElement(html) {
@@ -11,7 +13,6 @@ function htmlToElement(html) {
 
 var book = {
     'gencod': gencod,
-    'url' : document.URL,
 };
 
 let modalroot = document.getElementById("myModal5");
@@ -77,6 +78,7 @@ addtomap_btn.addEventListener('click', function() {
 
     book['thumb'] = title_img.getAttribute("src");
     book['title'] = title_img.getAttribute("title");
+    book['url'] = modalroot.querySelector(".titreChoixLibraire a").getAttribute("href");
 
 
     let libs_avail = [];
@@ -142,3 +144,6 @@ addtomap_btn.addEventListener('click', function() {
 
 btn_line.prepend(displaymap_btn);
 btn_line.prepend(addtomap_btn);
+
+
+})();

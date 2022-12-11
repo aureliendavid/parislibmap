@@ -5,8 +5,7 @@ filters = {
     }
 
 function url_catcher(details) {
-    console.log("background url_catcher");
-    console.log(details);
+
     let url = details.url;
     let regexp;
     for (const key of Object.keys(filters)) {
@@ -30,7 +29,7 @@ browser.webRequest.onCompleted.addListener(
 
 
 function on_result(result) {
-    console.log(result);
+    //console.log(result);
 }
 function on_error(error) {
     console.log(error);

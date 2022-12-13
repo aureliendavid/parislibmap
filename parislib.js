@@ -20,7 +20,7 @@ let modalroot = document.getElementById("myModal5");
 
 let btn_line = document.getElementsByClassName("choixregion")[0];
 
-var maphtml = browser.extension.getURL("map.html");
+var maphtml = browser.runtime.getURL("map.html");
 
 let iframe = document.createElement("iframe")
 iframe.id = "parislibmap";

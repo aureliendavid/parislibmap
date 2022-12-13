@@ -16,6 +16,22 @@
     width: 75%;
 }
 
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 768px) {
+    #cols {
+        flex-direction: column;
+    }
+
+    #leftmenu {
+        width: 100%;
+    }
+
+    .llmap {
+        width: 100%;
+    }
+
+}
+
 .lf-book-marker {
     width: 36px;
     height: 36px;

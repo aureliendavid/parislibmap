@@ -68,7 +68,7 @@ displaymap_btn.addEventListener('click', function() {
 
 })
 
-let addtomap_btn = htmlToElement('<div class="pull-left" style="display:flex;"> <button class="btn pull-right" type="button" id="extension_addtomap"><i class="far fa-map" aria-hidden="true"></i><span class="hidden-xs">&nbsp; '+add_text+'</span></button></div>')
+let addtomap_btn = htmlToElement('<div class="pull-left" style="display:flex;"> <button class="btn pull-right" type="button" id="extension_addtomap"><i class="far"><span class="far fa-plus" aria-hidden="true"></span><span class="far fa-map" aria-hidden="true"></span></i><span class="hidden-xs">&nbsp; '+add_text+'</span></button></div>')
 
 addtomap_btn.addEventListener('click', function() {
 

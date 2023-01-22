@@ -37,7 +37,7 @@ function build_lib_popup(libname) {
 
         let books = all_libraries[libname]['books'];
         for (let book of books) {
-            res += `<a target="_blank" href="https://www.parislibrairies.fr${book['url']}"><img class='book_thumb' src="${book['thumb']}" title="${book['title']}" /></a>&nbsp;`;
+            res += `<a target="_blank" href="${ book['url']}"><img class='book_thumb' src="${book['thumb']}" title="${book['title']}" /></a>&nbsp;`;
         }
 
         res += "<br /><br />" + lib['addr'].replaceAll("\n\n", "<br />");

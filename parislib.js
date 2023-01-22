@@ -19,6 +19,7 @@ let modalroot = document.getElementById("myModal5");
 
 
 let btn_line = document.getElementsByClassName("choixregion")[0];
+let toolbar = document.getElementById("filtre_recherche_lib")
 
 var maphtml = browser.runtime.getURL("map.html");
 
@@ -35,7 +36,7 @@ let hide_text = "Cacher la carte";
 let add_text = "Ajouter à la carte";
 
 
-btn_line.appendChild(iframe);
+toolbar.appendChild(iframe);
 
 
 let displaymap_btn = htmlToElement('<div class="pull-left" style="display:flex;"> <button class="btn pull-right" type="button" id="extension_displaymap"><i class="far fa-map" aria-hidden="true"></i>&nbsp; <span id="displaybtn_text" class="hidden-xs">'+display_text+'</span></button></div>')
@@ -74,11 +75,19 @@ addtomap_btn.addEventListener('click', function() {
 
     let libraries = modalroot.querySelectorAll(".detail_librairie");
 
-    let title_img = modalroot.querySelector(".titreChoixLibraire img");
+    let couv_elt = document.querySelector('img[src*="'+gencod+'"][alt]')
 
-    book['thumb'] = title_img.getAttribute("src");
-    book['title'] = title_img.getAttribute("title");
-    book['url'] = modalroot.querySelector(".titreChoixLibraire a").getAttribute("href");
+    book['thumb'] = couv_elt.getAttribute("src");
+    book['title'] = couv_elt.getAttribute("alt");
+
+    if (document.URL.includes("/livre/" + gencod)) {
+        book['url'] = document.URL;
+    }
+    else {
+        let link_elt = document.querySelector('a[href^="/livre/'+gencod+'"]')
+        book['url'] = "https://www.parislibrairies.fr"+ link_elt.getAttribute("href");
+    }
+
 
 
     let libs_avail = [];
@@ -89,6 +98,7 @@ addtomap_btn.addEventListener('click', function() {
 
         if (!dispo_p)
             return;
+
 
         if (dispo_p.textContent.trim() == "En stock") {
 
@@ -118,7 +128,6 @@ addtomap_btn.addEventListener('click', function() {
 
     book['avail'] = libs_avail;
 
-
     function onGot(items, book) {
 
         books = items.books || {}
@@ -142,8 +151,8 @@ addtomap_btn.addEventListener('click', function() {
 
 })
 
-btn_line.prepend(displaymap_btn);
-btn_line.prepend(addtomap_btn);
+toolbar.prepend(displaymap_btn);
+toolbar.prepend(addtomap_btn);
 
 
 })();

@@ -138,7 +138,7 @@ function add_intersection() {
         mymarker.classList.add("lf-book-marker");
         mymarker.classList.add("book_marker");
 
-        let inter_legend = "<div class='legend_row'>" + mymarker.outerHTML + "<img class='book_thumb' src='' />&nbsp;<b>" + "Intersection" + "</b></div>" ;
+        let inter_legend = "<div class='legend_row'>" + mymarker.outerHTML + "<img class='book_thumb' id='intersection_cover_img' src='static/images/intersection2-svgrepo-com.svg' />&nbsp;<b>" + "Intersection" + "</b></div>" ;
 
         book_layer_control.addOverlay(inter_layer, inter_legend);
 
@@ -175,7 +175,9 @@ function on_got_books_from_storage(item) {
 
         let book_icon = L.divIcon({className: 'lf-book-marker lf-book-marker-opacity ' + book_class, iconSize: [36, 36]});
 
-        book['legend'] = "<div class='legend_row'>" + mymarker.outerHTML + "<img class='book_thumb' src='"+book['thumb']+"' />&nbsp;<b>" + book['title'] + "</b><span class='actions_span'><input class='inter_checkbox' "+(book.in_inter?"checked":"")+" type='checkbox' id='chk-"+gencod+"' data-gencod='"+gencod+"' title='Include dans l&apos;intersection ?' ><img src='static/images/delete.png' title='Retirer de la liste' class='del_btn' data-gencod='"+gencod+"'></img></span></div>" ;
+        book['legend'] = "<div class='legend_row'>" + mymarker.outerHTML + "<img class='book_thumb' src='"+book['thumb']+"' />&nbsp;<b>" + book['title'] + "</b><span class='actions_span'>";
+        book['legend'] += "<input class='inter_checkbox' "+(book.in_inter?"checked":"")+" type='checkbox' id='chk-"+gencod+"' data-gencod='"+gencod+"' ><label for='chk-"+gencod+"'><img src='static/images/intersection-svgrepo-com.svg' class='inter_chk_label_img' title='Inclure dans l&apos;intersection ?' /></label>",
+        book['legend'] += "<img src='static/images/delete.png' title='Retirer de la liste' class='del_btn' data-gencod='"+gencod+"'></img></span></div>" ;
 
         let libs = book['avail'];
 

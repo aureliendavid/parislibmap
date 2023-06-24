@@ -39,6 +39,11 @@
     background-size: 36px 36px;
 }
 
+#intersection_cover_img {
+    margin-top: 5px;
+    filter: brightness(0.5) sepia(1) hue-rotate(-80deg) saturate(2);
+}
+
 .lf-book-marker-opacity {
     opacity: 100%;
 }
@@ -93,4 +98,29 @@
 .del_btn:hover {
     opacity: 1;
     filter: invert(30%) sepia(93%) saturate(7455%) hue-rotate(356deg) brightness(103%) contrast(120%);
+}
+
+
+.inter_chk_label_img {
+    width: 22px;
+    opacity: 0.4;
+    vertical-align: text-bottom;
+}
+
+.inter_chk_label_img:hover {
+    /* opacity: 1; */
+    filter: invert(30%) sepia(93%) saturate(7455%) hue-rotate(356deg) brightness(103%) contrast(120%);
+}
+
+.inter_checkbox {
+    display:none;
+}
+
+.inter_checkbox + label {
+    display:inline;
+    /* vertical-align: text-bottom; */
+}
+
+.inter_checkbox:checked + label > .inter_chk_label_img {
+    opacity: 1;
 }

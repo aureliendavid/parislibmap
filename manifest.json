@@ -31,5 +31,5 @@
 
   "web_accessible_resources": ["parislib.js", "map.html", "map.js", "static/*", "static/images/*", "icons/*"],
 
-  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "storage", "tabs"]
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking", "storage", "tabs", "scripting"]
 }

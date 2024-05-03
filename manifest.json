@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "ParislibMap",
-  "version": "0.7",
+  "version": "0.8",
   "author": "Aurelien David",
   "homepage_url": "https://github.com/aureliendavid/parislib",
 
@@ -24,6 +24,9 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "{c0d0a683-8bd1-49e4-9203-0ddc1fca93e8}"
+    },
+    "gecko_android": {
+      "strict_min_version": "113.0"
     }
   },
 

@@ -1,18 +1,18 @@
 {
 
   "manifest_version": 2,
-  "name": "parislib",
-  "version": "0.4",
+  "name": "ParislibMap",
+  "version": "0.7",
   "author": "Aurelien David",
   "homepage_url": "https://github.com/aureliendavid/parislib",
 
-  "description": "Carte pour le site parislibrairies.fr",
+  "description": "Adds a map for books availability to parislibrairies.fr",
 
   "icons": {
-    "32": "icons/parislib-32.png",
-    "64": "icons/parislib-64.png",
-    "128": "icons/parislib-128.png",
-    "256": "icons/parislib-256.png"
+    "32": "icons/bookmap-32.png",
+    "64": "icons/bookmap-64.png",
+    "128": "icons/bookmap-128.png",
+    "256": "icons/bookmap-256.png"
   },
 
   "background": {
